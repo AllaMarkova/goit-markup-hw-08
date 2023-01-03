@@ -1,0 +1,11 @@
+.footer-soc {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-right: 93px;
+}
+
+.soc-list__link--inverse {
+  background-color: var(--color-footer-soc);
+  color: var(--color-primary-white);
+}
