@@ -4,24 +4,53 @@
   background-color: var(--bgc-footer);
   & .logo {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
     margin-right: 0;
   }
 }
 .footer-box {
-  display: flex;
-  align-items: baseline;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer-address {
-  margin-right: 70px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 94px;
+  }
 }
 
+.tablet-box {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+   @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
+}
 .logo__title-footer {
   color: var(--color-primary-white);
 }
 .footer__text {
-  margin-bottom: 9px;
+  margin-bottom: 12px;
   font-style: normal;
   font-size: 14px;
   line-height: 1.7;

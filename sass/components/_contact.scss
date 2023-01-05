@@ -1,17 +1,21 @@
-.contact-list__items:not(:last-child) {
-  margin-right: 40px;
-}
 .contact-list {
-  display: flex;
-  margin-left: auto;
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    margin-left: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    .contact-list__items:not(:last-child) {
+      margin-right: 40px;
+    }
+    display: flex;
+    margin-left: auto;
+  }
 }
 
 .contact-list__links {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -20,6 +24,15 @@
   color: var(--color-secondary);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &:hover,
   &:focus {
     color: var(--color-active);
@@ -27,10 +40,30 @@
 }
 
 .contact-list__envelope {
-  margin-right: 10px;
   fill: currentColor;
+  @media screen and (min-width: 768px) {
+    margin-right: 8px;
+    width: 14px;
+    height: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+    width: 16px;
+    height: 12px;
+  }
 }
 .contact-list__smartphone {
-  margin-right: 10px;
   fill: currentColor;
+  @media screen and (min-width: 768px) {
+    width: 10px;
+    height: 14px;
+    margin-right: 8px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+    width: 10px;
+    height: 16px;
+  }
 }

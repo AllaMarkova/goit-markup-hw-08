@@ -1,8 +1,16 @@
 .footer-soc {
-  display: block;
-  justify-content: center;
-  align-items: center;
-  margin-right: 93px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px){
+    display: inline-block;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    margin-right: 94px;
+  }
 }
 
 .soc-list__link--inverse {
