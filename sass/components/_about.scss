@@ -30,14 +30,13 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
- @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     text-align: center;
   }
 
   @media screen and (min-width: 1200px) {
     text-align: start;
   }
-
 }
 
 .about-list__text {
@@ -49,23 +48,10 @@
 }
 .about-list__box {
   margin-bottom: 30px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--bgc-team);
   border-radius: 4px;
-
-  @media screen and (max-width: 767px) {
-    padding: 25px 190px;
-  }
-
-  @media screen and (min-width: 768px) {
-    padding: 25px 142px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    padding: 25px 100px;
-  }
-}
-
-.about-list__icon {
-  width: 70px;
-  height: 70px;
 }
