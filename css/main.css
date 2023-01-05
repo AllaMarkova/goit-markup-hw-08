@@ -584,6 +584,12 @@ header .container {
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
 }
+@media screen and (min-width: 768px) {
+  .about-list__items {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
 @media screen and (max-width: 767px) {
   .about-list__items:not(:last-child) {
     margin-bottom: 30px;
