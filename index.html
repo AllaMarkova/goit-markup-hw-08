@@ -79,26 +79,52 @@
         </button>
 
         <ul class="mobile__list">
-            <li class="mobile__item"><a class="mobile__link mobile__link--current link" href="index.html">Студія</a></li>
-            <li class="mobile__item"><a class="mobile__link link" href="portfolio.html">Портфоліо</a></li>
-            <li class="mobile__item"><a class="mobile__link link" href="index.html">Контакти</a></li>
+          <li class="mobile__item">
+            <a class="mobile__link mobile__link--current link" href="index.html"
+              >Студія</a
+            >
+          </li>
+          <li class="mobile__item">
+            <a class="mobile__link link" href="portfolio.html">Портфоліо</a>
+          </li>
+          <li class="mobile__item">
+            <a class="mobile__link link" href="index.html">Контакти</a>
+          </li>
         </ul>
-
 
         <ul class="mobile__address-list">
-          <li class="mobile__address-item"><a class="mobile__address-tell link" href="tel:+380961111111">
-                +38096 111 11 11</a></li>
-          <li class="mobile__address-item"><a class="mobile__address-mail link" href="mailto:info@devstudio.com">
-                info@devstudio.com</a></li>
-          
+          <li class="mobile__address-item">
+            <a class="mobile__address-tell link" href="tel:+380961111111">
+              +38096 111 11 11</a
+            >
+          </li>
+          <li class="mobile__address-item">
+            <a
+              class="mobile__address-mail link"
+              href="mailto:info@devstudio.com"
+            >
+              info@devstudio.com</a
+            >
+          </li>
         </ul>
 
-
         <ul class="mobile__social-list">
-            <li class="mobile__social-item"><a class="mobile__social-link link" href="#">Instagram</a></li>
-            <li class="mobile__social-item"><a class="mobile__social-link link" href="#">Twitter</a></li>
-            <li class="mobile__social-item"><a class="mobile__social-link link" href="#">Facebook</a></li>
-            <li class="mobile__social-item"><a class="mobile__social-link mobile__social-link--current link" href="#">LinkedIn</a></li>
+          <li class="mobile__social-item">
+            <a class="mobile__social-link link" href="#">Instagram</a>
+          </li>
+          <li class="mobile__social-item">
+            <a class="mobile__social-link link" href="#">Twitter</a>
+          </li>
+          <li class="mobile__social-item">
+            <a class="mobile__social-link link" href="#">Facebook</a>
+          </li>
+          <li class="mobile__social-item">
+            <a
+              class="mobile__social-link mobile__social-link--current link"
+              href="#"
+              >LinkedIn</a
+            >
+          </li>
         </ul>
       </div>
     </header>
@@ -184,12 +210,18 @@
           <ul class="projects-list">
             <li class="projects-list__item">
               <div class="projects-list__box">
-                <img
-                  src="./images/img1.jpg"
-                  alt="Десктопні_додатки"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <img
+                    srcset="
+                      ./images/desktop1x.jpg 1x,
+                      ./images/desktop2x.jpg 2x
+                    "
+                    src="./images/desktop1x.jpg"
+                    alt="Десктопні додатки"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <div class="projects-list__tumb">
                   <p class="projects-list__text">ДЕСКТОПНІ ДОДАТКИ</p>
                 </div>
@@ -197,12 +229,15 @@
             </li>
             <li class="projects-list__item">
               <div class="projects-list__box">
-                <img
-                  src="./images/img2.jpg"
-                  alt="мобільні_додатки "
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <img
+                    srcset="./images/mobile1x.jpg 1x, ./images/mobile2x.jpg 2x"
+                    src="./images/mobile1x.jpg"
+                    alt="Мобільні додатки"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <div class="projects-list__tumb">
                   <p class="projects-list__text">МОБІЛЬНІ ДОДАТКИ</p>
                 </div>
@@ -210,12 +245,15 @@
             </li>
             <li class="projects-list__item">
               <div class="projects-list__box">
-                <img
-                  src="./images/img3.jpg"
-                  alt="дизайнерські_рішення"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <img
+                    srcset="./images/laptop1x.jpg 1x, ./images/laptop2x.jpg 2x"
+                    src="./images/laptop1x.jpg"
+                    alt="Дизайнерські рішення"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <div class="projects-list__tumb">
                   <p class="projects-list__text">ДИЗАЙНЕРСЬКІ РІШЕННЯ</p>
                 </div>
@@ -230,12 +268,37 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__box">
-              <img
-                src="./images/img4.jpg"
-                alt=" Фото Ігор Дем'яненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/igor-dem-desktop1x.jpg 1x,
+                    ./images/igor-dem-desktop2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/igor-dem-tablet1x.jpg 1x,
+                    ./images/igor-dem-tablet2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/igor-dem-mobile1x.jpg 1x,
+                    ./images/igor-dem-mobile2x.jpg 2x
+                  "
+                />
+                <img
+                  class="team__image"
+                  src="./images/igor-dem-mobile1x.jpg"
+                  alt="Фото Ігор Дем'яненко"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team__content">
                 <h3 class="team__names">Ігор Дем'яненко</h3>
                 <p class="team__position">Product Designer</p>
@@ -273,12 +336,37 @@
             </li>
 
             <li class="team-list__box">
-              <img
-                src="./images/img5.jpg"
-                alt="Фото Ольга Рєпіна"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/olga-repina-desktop1x.jpg 1x,
+                    ./images/olga-repina-desktop2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/olga-repina-tablet1x.jpg 1x,
+                    ./images/olga-repina-tablet2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/olga-repina-mob1x.jpg 1x,
+                    ./images/olga-repina-mob2x.jpg 2x
+                  "
+                />
+                <img
+                  class="team__image"
+                  src="./images/olga-repina-mob1x.jpg"
+                  alt="Фото Ольги Рєпіної"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team__content">
                 <h3 class="team__names">Ольга Рєпіна</h3>
                 <p class="team__position">Frontend Developer</p>
@@ -316,12 +404,37 @@
             </li>
 
             <li class="team-list__box">
-              <img
-                src="./images/img6.jpg"
-                alt="Фото Микола Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/mykola-tarasov-desktop1x.jpg 1x,
+                    ./images/mykola-tarasov-desktop2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/mykola-tarasov-tablet1x.jpg 1x,
+                    ./images/mykola-tarasov-tablet2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mykola-tarasov-mob1x.jpg 1x,
+                    ./images/mykola-tarasov-mob2x.jpg 2x
+                  "
+                />
+                <img
+                  class="team__image"
+                  src="./images/mykola-tarasov-mob1x.jpg"
+                  alt="Фото Микола Тарасов"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team__content">
                 <h3 class="team__names">Микола Тарасов</h3>
                 <p class="team__position">Marketing</p>
@@ -359,12 +472,37 @@
             </li>
 
             <li class="team-list__box">
-              <img
-                src="./images/img7.jpg"
-                alt="Фото Михайло Єрмаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/myhailo-ermakov-desktop1x.jpg 1x,
+                    ./images/myhailo-ermakov-desktop2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/myhailo-ermakov-tablet1x.jpg 1x,
+                    ./images/myhailo-ermakov-tablet2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/myhailo-ermakov-mob1x.jpg 1x,
+                    ./images/myhailo-ermakov-mob2x.jpg 2x
+                  "
+                />
+                <img
+                  class="team__image"
+                  src="./images/myhailo-ermakov-mob1x.jpg"
+                  alt="Фото Михайло Єрмаков"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team__content">
                 <h3 class="team__names">Михайло Єрмаков</h3>
                 <p class="team__position">UI Designer</p>

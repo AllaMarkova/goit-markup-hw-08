@@ -1,7 +1,7 @@
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  max-width: 450px;
+  width: 100%;
   top: 50%;
   left: 50%;
   padding: 40px;
@@ -11,12 +11,22 @@
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+    width: 100%;
+  }
 }
+
 .modal__form {
   width: 100%;
+  @media screen and (min-width: 1200px) {
+    max-width: 448px;
+  }
 }
 
 .modal-close {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,10 +37,8 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   padding: 6px;
-  position: absolute;
+
   top: 8px;
-  left: 490px;
-  bottom: 543px;
   right: 8px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
@@ -43,10 +51,14 @@
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: calc(30 / 20);
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--color-primary);
+
+  @media screen and (min-width: 1200px) {
+    line-height: calc(30 / 23);
+  }
 }
 
 .form-tumb {
@@ -61,7 +73,7 @@
   margin-bottom: 4px;
   text-align: left;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: calc(14 / 12);
   letter-spacing: 0.01em;
   color: var(--color-secondary);
 }
@@ -158,10 +170,15 @@
 }
 .checkbox-text {
   font-weight: 400;
-  font-size: 14px;
-  line-height: calc(24 / 14);
+  font-size: 12px;
+  line-height: calc(14 / 12);
   letter-spacing: 0.03em;
   color: var(--color-secondary);
+
+  @media screen and (min-width: 1200px){
+    font-size: 14px;
+  line-height: calc(24 / 14);
+  }
 }
 .form-link {
   display: inline-block;

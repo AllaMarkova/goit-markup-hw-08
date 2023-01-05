@@ -61,6 +61,7 @@ button {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 input,
@@ -370,14 +371,14 @@ header .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 999;
   background-color: var(--color-primary-white);
-  z-index: 99;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  -webkit-transition: -webkit-transform 250ms ease-in-out;
-  transition: -webkit-transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-container.is-open {
@@ -467,19 +468,52 @@ header .container {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  height: 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: var(--bgc-footer);
-  max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(var(--color-gradient)), to(var(--color-gradient))), url(../images/banner-hero.jpg);
-  background-image: linear-gradient(to right, var(--color-gradient), var(--color-gradient)), url(../images/banner-hero.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--color-gradient)), to(var(--color-gradient))), url(..//..//images/hero-mob1x.jpg);
+  background-image: linear-gradient(to right, var(--color-gradient), var(--color-gradient)), url(..//..//images/hero-mob1x.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-gradient)), to(var(--color-gradient))), url(..//..//images/hero-mob2x.jpg);
+    background-image: linear-gradient(to right, var(--color-gradient), var(--color-gradient)), url(..//..//images/hero-mob2x.jpg);
+  }
+}
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-gradient)), to(var(--color-gradient))), url(..//..//images/hero-tablet1x.jpg);
+    background-image: linear-gradient(to right, var(--color-gradient), var(--color-gradient)), url(..//..//images/hero-tablet1x.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-gradient)), to(var(--color-gradient))), url(..//..//images/hero-tablet2x.jpg);
+    background-image: linear-gradient(to right, var(--color-gradient), var(--color-gradient)), url(..//..//images/hero-tablet2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-gradient)), to(var(--color-gradient))), url(..//..//images/hero-desktop1x.jpg);
+    background-image: linear-gradient(to right, var(--color-gradient), var(--color-gradient)), url(..//..//images/hero-desktop1x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-gradient)), to(var(--color-gradient))), url(..//..//images/hero-desktop2x.jpg);
+    background-image: linear-gradient(to right, var(--color-gradient), var(--color-gradient)), url(..//..//images/hero-desktop2x.jpg);
+  }
+}
 .hero__title {
   margin-bottom: 30px;
   color: var(--color-primary-white);
@@ -697,6 +731,19 @@ header .container {
 @media screen and (min-width: 1200px) {
   .team-list__box:not(:last-child) {
     margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team__image {
+    width: 354px;
+    height: 374px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__image {
+    width: 270px;
+    height: 260px;
   }
 }
 
@@ -1283,8 +1330,8 @@ header .container {
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  max-width: 450px;
+  width: 100%;
   top: 50%;
   left: 50%;
   padding: 40px;
@@ -1299,12 +1346,24 @@ header .container {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    width: 100%;
+  }
+}
 
 .modal__form {
   width: 100%;
 }
+@media screen and (min-width: 1200px) {
+  .modal__form {
+    max-width: 448px;
+  }
+}
 
 .modal-close {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1321,10 +1380,7 @@ header .container {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   padding: 6px;
-  position: absolute;
   top: 8px;
-  left: 490px;
-  bottom: 543px;
   right: 8px;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1337,10 +1393,15 @@ header .container {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--color-primary);
+}
+@media screen and (min-width: 1200px) {
+  .modal__text {
+    line-height: 1.3043478261;
+  }
 }
 
 .form-tumb {
@@ -1360,7 +1421,7 @@ header .container {
   margin-bottom: 4px;
   text-align: left;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.1666666667;
   letter-spacing: 0.01em;
   color: var(--color-secondary);
 }
@@ -1478,10 +1539,16 @@ header .container {
 
 .checkbox-text {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7142857143;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: 0.03em;
   color: var(--color-secondary);
+}
+@media screen and (min-width: 1200px) {
+  .checkbox-text {
+    font-size: 14px;
+    line-height: 1.7142857143;
+  }
 }
 
 .form-link {
