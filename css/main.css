@@ -1033,6 +1033,11 @@ header .container {
   letter-spacing: 0.03em;
   color: var(--color-primary-white);
 }
+@media screen and (min-width: 1200px) {
+  .footer__text {
+    letter-spacing: 0;
+  }
+}
 
 .footer-list__item:not(:last-child) {
   margin-bottom: 9px;
